@@ -1,0 +1,3 @@
+{% extends "base.html" %}{% block heading %}Suppliers{% endblock %}{% block content %}
+<section class="panel"><h2>Add Supplier</h2><form method="post" class="form-grid"><input name="supplier_name" placeholder="Supplier name" required><input name="contact_name" placeholder="Contact person"><input name="email" type="email" placeholder="Email"><input name="phone" placeholder="Phone"><button class="button">Save Supplier</button></form></section>
+<section class="panel"><h2>Supplier List</h2><table><tr><th>Name</th><th>Contact</th><th>Email</th><th>Phone</th></tr>{% for s in suppliers %}<tr><td>{{ s.supplier_name }}</td><td>{{ s.contact_name }}</td><td>{{ s.email }}</td><td>{{ s.phone }}</td></tr>{% endfor %}</table></section>{% endblock %}
